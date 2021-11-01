@@ -5,7 +5,9 @@
   "main": "lib/index",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p .",
+    "deploy:test": "npm run build && scp lib/*.js root@139.196.201.219:/usr/local/testbot/yuque"
   },
   "repository": {
     "type": "git",
