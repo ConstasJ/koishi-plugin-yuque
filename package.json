@@ -7,6 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -p .",
+    "prerelease": "git checkout master && git merge develop",
+    "release": "standard-version",
+    "postrelease": "git push --follow-tags origin master && npm publish --registry=https://sakurarealm-npm.pkg.coding.net/sakurarealmbot/sakurabot-koishi/ && git checkout develop && git merge master && git push",
     "deploy:test": "npm run build && scp lib/*.js root@139.196.201.219:/usr/local/testbot/yuque"
   },
   "repository": {
@@ -16,12 +19,17 @@
   "keywords": [],
   "author": "ConstasJ <2020212726@qq.com>",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
     "koa-bodyparser": "^4.3.0"
   },
   "devDependencies": {
+    "@types/body-parser": "^1.19.1",
+    "@types/express": "^4.17.13",
     "@types/koa-bodyparser": "^4.3.3",
     "@types/node": "^16.11.6",
     "koishi": "^3.14.2",
+    "standard-version": "^9.3.2",
     "typescript": "^4.4.4"
   }
 }

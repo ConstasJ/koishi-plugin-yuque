@@ -1,3 +1,5 @@
+import bodyParser from 'body-parser';
+import express from 'express';
 import { Context } from 'koishi';
 
 interface BasicOptions {
@@ -6,25 +8,36 @@ interface BasicOptions {
         sendto: string[]
     }
 }
-function splitChannel(channelid:string){
-    const pat=/.*:[0-9]*/
-    const ctn=channelid.split(pat)
+function splitChannel(channelid: string) {
+    const ctn = channelid.split(':')
     return {
-        platform:ctn[0],
-        channelid:ctn[1]
+        platform: ctn[0],
+        channelid: ctn[1]
     }
 }
+
+export const app = express()
+
+app.set('port', process.env.PORT || 9040)
+app.use(bodyParser.json)
+app.use(bodyParser.urlencoded({ extended: true }))
+
 
 export function webhook(ctx: Context, config: BasicOptions = {}) {
     const sendto = ['onebot:563727991']
     //@ts-expect-error
     const mainbot = ctx.getBot('onebot')
-    ctx.router.post('/yuque', (ctxn) => {
-        const eventBody = ctxn.request.body
-        for (let channel of sendto){
-            const id=splitChannel(channel).channelid
+    app.post('/', (req, res, next) => {
+        console.log('Receive Yuque Callback!')
+        const eventBody = req.body
+        for (let channel of sendto) {
+            const id = channel.slice(7)
             console.log(id)
-            mainbot.sendMessage(id, eventBody)
+            mainbot.sendMessage(id, JSON.stringify(eventBody))
         }
+        res.send({ status: 200 })
+    })
+    app.listen(app.get('port'), () => {
+        console.log('Start Listening Yuque Callback!')
     })
 }

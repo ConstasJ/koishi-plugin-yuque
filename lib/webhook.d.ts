@@ -5,5 +5,6 @@ interface BasicOptions {
         sendto: string[];
     };
 }
+export declare const app: import("express-serve-static-core").Express;
 export declare function webhook(ctx: Context, config?: BasicOptions): void;
 export {};
