@@ -1,6 +1,6 @@
 {
   "name": "yuque",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "description": "用于芸樱绘境官方社区bot（基于koishi打造）的语雀交互/消息通知插件",
   "main": "lib/index",
   "types": "lib/index.d.ts",
