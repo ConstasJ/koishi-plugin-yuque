@@ -15,8 +15,8 @@ enum Type {
 const using = ['database'] as const;
 const name = 'yuque';
 const Config = Schema.object({
-    port: Schema.number().default(10080),
-    list: Schema.array(Schema.string()),
+    port: Schema.number().default(10080).description('WebHook监听端口'),
+    list: Schema.array(Schema.string()).description('配置转发的频道列表'),
 })
 
 async function apply(ctx: Context, conf: Config = {port: 10080, list: []}) {
@@ -43,7 +43,7 @@ async function apply(ctx: Context, conf: Config = {port: 10080, list: []}) {
                 break;
             }
         }
-        const txt = `【${type}】\n————————\n「${book}」知识库的『${title}』发生${type}`;
+        const txt = `【${type}】\n————————\n“${book}”知识库的《${title}》发生${type}`;
         await ctx.broadcast(conf.list, txt);
         res.end('<h1>Copy That</h1>');
     });
