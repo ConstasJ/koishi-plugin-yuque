@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/compare/v1.0.3...v1.1.0) (2022-04-12)
+
+
+### Features
+
+* 开始编写命令部分（但未完成） ([0b3ac0e](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/commit/0b3ac0eceebb8330f8d8b7d2c2df8cde5fc8dfa1))
+* 两项重大更改 ([9b4d4a5](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/commit/9b4d4a569758ad483d071417667c1a99762c1928))
+* 完成数据模型扩展部分 ([008678f](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/commit/008678f1e38c7078f4a2a144d77a2d2084ad27a3))
+
 ### [1.0.3](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/compare/v1.0.2...v1.0.3) (2022-04-12)
 
 ### [1.0.2](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/compare/v1.0.1...v1.0.2) (2022-04-12)
