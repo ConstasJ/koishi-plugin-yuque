@@ -22,7 +22,7 @@ async function apply(ctx: Context, conf: Config = {port: 10080, list: []}) {
     })
     const log = ctx.logger('yuque');
     await expr(ctx,log,conf);
-    await cmd(ctx,log);
+    await cmd(ctx,log,conf);
 }
 
 export {using,name,Config,apply};
