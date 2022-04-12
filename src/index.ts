@@ -2,7 +2,6 @@ import {Context, Schema} from "koishi";
 import {Config} from "./types";
 import {expr} from "./express";
 
-
 declare module 'koishi' {
     interface Channel {
         yuque:number,
