@@ -11,6 +11,11 @@ enum Type {
     CREATE_DOC = '文档发布',
     DELETE_DOC = '文档删除',
 }
+declare module 'koishi' {
+    interface Channel {
+        yuque:number,
+    }
+}
 
 const using = ['database'] as const;
 const name = 'yuque';
@@ -20,6 +25,9 @@ const Config = Schema.object({
 })
 
 async function apply(ctx: Context, conf: Config = {port: 10080, list: []}) {
+    ctx.model.extend('channel',{
+        yuque:'integer',
+    })
     const app = express();
     const log = ctx.logger('yuque');
     app.use(express.json());
