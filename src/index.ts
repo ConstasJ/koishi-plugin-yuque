@@ -1,6 +1,7 @@
 import {Context, Schema} from "koishi";
 import {Config} from "./types";
 import {expr} from "./express";
+import {cmd} from "./cmd";
 
 declare module 'koishi' {
     interface Channel {
@@ -21,6 +22,7 @@ async function apply(ctx: Context, conf: Config = {port: 10080, list: []}) {
     })
     const log = ctx.logger('yuque');
     await expr(ctx,log,conf);
+    await cmd(ctx,log);
 }
 
 export {using,name,Config,apply};

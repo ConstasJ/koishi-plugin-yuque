@@ -6,7 +6,7 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -p .",
+    "build": "rollup -c",
     "prerelease": "git checkout master && git merge develop",
     "release": "standard-version",
     "postrelease": "git push --follow-tags origin master && npm publish --registry=https://registry.npmjs.org && git checkout develop && git merge master && git push"
