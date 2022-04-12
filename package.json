@@ -9,7 +9,7 @@
     "build": "tsc -p .",
     "prerelease": "git checkout master && git merge develop",
     "release": "standard-version",
-    "postrelease": "git push --follow-tags origin master && npm publish --registry=https://sakurarealm-npm.pkg.coding.net/sakurarealmbot/sakurabot-koishi/ && git checkout develop && git merge master && git push"
+    "postrelease": "git push --follow-tags origin master && npm publish --registry=https://registry.npmjs.org && git checkout develop && git merge master && git push"
   },
   "repository": {
     "type": "git",
