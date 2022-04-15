@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.3](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/compare/v1.3.2...v1.3.3) (2022-04-15)
+
+
+### Bug Fixes
+
+* 修正无法正确显示用户名称的Bug ([5dd8f83](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/commit/5dd8f8338cbca5d9cf3e0dd754488281c3cc7490))
+
 ### [1.3.2](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/compare/v1.3.1...v1.3.2) (2022-04-15)
 
 ### [1.3.1](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/compare/v1.3.0...v1.3.1) (2022-04-15)
