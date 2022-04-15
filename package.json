@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
-    "prerelease": "git checkout master && git merge develop",
+    "prerelease": "git checkout master && git merge develop && yarn build",
     "release": "standard-version",
     "postrelease": "git push --follow-tags origin master && npm publish --registry=https://registry.npmjs.org && git checkout develop && git merge master && git push"
   },
@@ -23,6 +23,7 @@
   ],
   "author": "ConstasJ <2020212726@qq.com>",
   "dependencies": {
+    "axios": "^0.26.1",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "koa-bodyparser": "^4.3.0"
