@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/compare/v1.2.0...v1.3.0) (2022-04-15)
+
+
+### Features
+
+* 增加操作者 ([1d4f349](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/commit/1d4f34918a8154ecadd98cf46e0081cdcb399ea5))
+
+
+### Bug Fixes
+
+* 使.is的行为更合理 ([9fb60f0](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/commit/9fb60f02356e9cdca548038219185bb71db09e3c))
+
 ## [1.2.0](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/compare/v1.0.3...v1.2.0) (2022-04-12)
 
 
