@@ -9,6 +9,7 @@ async function expr(ctx:Context,log:Logger,conf:Config){
     app.post('/', async (req, res) => {
         const title = req.body.data.title;
         const book = req.body.data.book.name;
+        const user=req.body.data.user.name;
         const typeRaw = req.body.data.action_type;
         let type;
         switch (typeRaw) {
@@ -25,7 +26,7 @@ async function expr(ctx:Context,log:Logger,conf:Config){
                 break;
             }
         }
-        const txt = `【${type}】\n————————\n“${book}”知识库的《${title}》发生${type}`;
+        const txt = `【${type}】\n————————\n${user}对“${book}”知识库的《${title}》进行${type}操作`;
         await ctx.broadcast(conf.list, txt);
         res.end('<h1>Copy That</h1>');
     });
