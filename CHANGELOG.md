@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/compare/v1.3.4...v1.4.0) (2022-04-16)
+
+
+### Features
+
+* 添加显示文档网址功能 ([2bdb556](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/commit/2bdb556739c16c75a181dd9a2467cc766e5699bd))
+
 ### [1.3.4](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/compare/v1.3.3...v1.3.4) (2022-04-16)
 
 
