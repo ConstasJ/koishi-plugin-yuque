@@ -20,7 +20,7 @@ async function expr(ctx:Context,log:Logger,conf:Config){
     app.post('/', async (req, res) => {
         const title = req.body.data.title;
         const book = req.body.data.book.name;
-        const user=getUserName(req.body.data.user_id);
+        const user=await getUserName(req.body.data.user_id);
         const typeRaw = req.body.data.action_type;
         let type;
         switch (typeRaw) {
