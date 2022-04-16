@@ -21,6 +21,7 @@ async function expr(ctx:Context,log:Logger,conf:Config){
         const title = req.body.data.title;
         const book = req.body.data.book.name;
         const user=await getUserName(req.body.data.user_id);
+        const path=req.body.data.path;
         const typeRaw = req.body.data.action_type;
         let type;
         switch (typeRaw) {
@@ -37,7 +38,7 @@ async function expr(ctx:Context,log:Logger,conf:Config){
                 break;
             }
         }
-        const txt = `【${type}】\n————————\n${user}对“${book}”知识库的《${title}》进行${type}操作`;
+        const txt = `【${type}】\n————————\n${user}对“${book}”知识库的《${title}》进行${type}操作\n地址：https://www.yuque.com/${path}`;
         await ctx.broadcast(conf.list, txt);
         res.end('<h1>Copy That</h1>');
     });
