@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.4](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/compare/v1.3.3...v1.3.4) (2022-04-16)
+
+
+### Bug Fixes
+
+* 修复了用户名显示为[Object Promise]的问题 ([0f43a2f](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/commit/0f43a2f72bee0e4fc874a611c39aedd154f6947f))
+
 ### [1.3.3](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/compare/v1.3.2...v1.3.3) (2022-04-15)
 
 
