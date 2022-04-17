@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.1](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/compare/v1.5.0...v1.5.1) (2022-04-17)
+
+
+### Bug Fixes
+
+* 添加频道自动去重 ([b67a6ef](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/commit/b67a6ef42cefe923eba21293dd8384510c8214d0))
+
 ## [1.5.0](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/compare/v1.4.0...v1.5.0) (2022-04-17)
 
 
