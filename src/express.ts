@@ -18,6 +18,13 @@ async function expr(ctx:Context,log:Logger,conf:Config){
     app.use(express.json());
     app.use(express.urlencoded({extended: true}));
     app.post('/', async (req, res) => {
+        const dbList=await ctx.database.get('channel',{yuque:1});
+        const list:string[]=[];
+        for(const chn of dbList){
+            const channel=`${chn.platform}:${chn.id}`;
+            list.push(channel);
+        }
+        list.push(...conf.list);
         const title = req.body.data.title;
         const book = req.body.data.book.name;
         const user=await getUserName(req.body.data.user_id);
@@ -39,7 +46,7 @@ async function expr(ctx:Context,log:Logger,conf:Config){
             }
         }
         const txt = `【${type}】《${title}》\n\n知识库：${book}\n操作人：${user}\n地址：https://www.yuque.com/${path}\n——————————`;
-        await ctx.broadcast(conf.list, txt);
+        await ctx.broadcast(list, txt);
         res.end('<h1>Copy That</h1>');
     });
     app.listen(conf.port, () => {
