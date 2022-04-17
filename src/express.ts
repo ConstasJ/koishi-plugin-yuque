@@ -38,7 +38,7 @@ async function expr(ctx:Context,log:Logger,conf:Config){
                 break;
             }
         }
-        const txt = `【${type}】\n————————\n${user}对“${book}”知识库的《${title}》进行${type}操作\n地址：https://www.yuque.com/${path}`;
+        const txt = `【${type}】《${title}》\n\n知识库：${book}\n操作人：${user}\n地址：https://www.yuque.com/${path}\n——————————`;
         await ctx.broadcast(conf.list, txt);
         res.end('<h1>Copy That</h1>');
     });
