@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/compare/v1.4.0...v1.5.0) (2022-04-17)
+
+
+### Features
+
+* 添加数据库Channel推送目标 ([5f9650b](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/commit/5f9650b9deda3e64e145836f4bd06b1702694ba6))
+* 完成增加消息体消息类型 ([92ef7b0](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/commit/92ef7b0fa817833d5d96f882fb0961cf0dbcb2f0))
+* 完成指令操作 ([cd3b469](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/commit/cd3b4696d5fb94f1527e4c60543b6666cd0bbdd3))
+
 ## [1.4.0](https://e.coding.net/sakurarealm/sakurarealmbot/yuque/compare/v1.3.4...v1.4.0) (2022-04-16)
 
 
