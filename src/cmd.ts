@@ -22,7 +22,7 @@ async function cmd(ctx:Context,log:Logger,conf:Config){
                 return '出现错误！详情请查看日志';
             }
         });
-    cmd.subcommand('.del','添加语雀推送频道',{authority:3})
+    cmd.subcommand('.del', '删除语雀推送频道', {authority: 3})
         .action(async ({session})=>{
             try{
                 await ctx.database.upsert('channel',[
