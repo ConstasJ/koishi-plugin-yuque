@@ -1,4 +1,4 @@
-import {Context,Session,Logger} from "koishi";
+import {Context, Logger} from "koishi";
 import {Config} from "./types";
 
 async function cmd(ctx:Context,log:Logger,conf:Config){
