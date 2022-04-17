@@ -18,17 +18,22 @@ async function expr(ctx:Context,log:Logger,conf:Config){
     app.use(express.json());
     app.use(express.urlencoded({extended: true}));
     app.post('/', async (req, res) => {
-        const dbList=await ctx.database.get('channel',{yuque:1});
-        const list:string[]=[];
-        for(const chn of dbList){
-            const channel=`${chn.platform}:${chn.id}`;
+        const dbList = await ctx.database.get('channel', {yuque: 1});
+        const list: string[] = [];
+        for (const chn of dbList) {
+            const channel = `${chn.platform}:${chn.id}`;
             list.push(channel);
         }
         list.push(...conf.list);
         const title = req.body.data.title;
         const book = req.body.data.book.name;
-        const user=await getUserName(req.body.data.user_id);
-        const path=req.body.data.path;
+        let user: string;
+        if (req.body.data.user.type === 'Group') {
+            user = await getUserName(req.body.data.user_id);
+        } else {
+            user = req.body.data.user.name;
+        }
+        const path = req.body.data.path;
         const typeRaw = req.body.data.action_type;
         let type;
         switch (typeRaw) {
@@ -42,6 +47,26 @@ async function expr(ctx:Context,log:Logger,conf:Config){
             }
             case 'delete': {
                 type = Type.DELETE_DOC;
+                break;
+            }
+            case 'comment_create': {
+                type = Type.CREATE_COMMENT;
+                break;
+            }
+            case 'comment_update': {
+                type = Type.UPDATE_COMMENT;
+                break;
+            }
+            case 'new_review': {
+                type = Type.NEW_REVIEW;
+                break;
+            }
+            case 'complete_review': {
+                type = Type.COMPLETE_REVIEW;
+                break;
+            }
+            case 'cancel_review': {
+                type = Type.CANCEL_REVIEW;
                 break;
             }
         }
