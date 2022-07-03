@@ -13,7 +13,7 @@ async function getUserName(id:string){
     return res.data.data.name;
 }
 
-async function expr(ctx:Context,log:Logger,conf:Config){
+async function router(ctx:Context, log:Logger, conf:Config){
     const app = express();
     app.use(express.json());
     app.use(express.urlencoded({extended: true}));
@@ -83,4 +83,4 @@ async function expr(ctx:Context,log:Logger,conf:Config){
     })
 }
 
-export {expr};
+export {router};
