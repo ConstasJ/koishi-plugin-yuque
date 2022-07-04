@@ -1,19 +1,18 @@
 import {Context} from "koishi";
 import express from "express";
 import {Config, Type} from "./types";
-import axios from "axios";
-
-async function getUserName(id:string){
-    const res=await axios.get(`https://www.yuque.com/api/v2/users/${id}`,{
-        headers:{
-            'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36',
-            'X-Auth-Token':'ssHgJoZIlE770Eilv7kvf5DO6pxbUHWdBbrk98PZ',
-        }
-    });
-    return res.data.data.name;
-}
 
 async function router(ctx: Context, conf: Config) {
+    async function getUserName(id: string) {
+        const res = await ctx.http.get(`https://www.yuque.com/api/v2/users/${id}`, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36',
+                'X-Auth-Token': 'ssHgJoZIlE770Eilv7kvf5DO6pxbUHWdBbrk98PZ',
+            }
+        });
+        return res.data.data.name;
+    }
+
     const app = express();
     app.use(express.json());
     app.use(express.urlencoded({extended: true}));
