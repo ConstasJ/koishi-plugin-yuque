@@ -13,10 +13,7 @@ async function router(ctx: Context, conf: Config) {
         return res.data.data.name;
     }
 
-    const app = express();
-    app.use(express.json());
-    app.use(express.urlencoded({extended: true}));
-    app.post('/', async (req, res) => {
+    async function getChannels() {
         // Get Channels from Database
         const dbList = await ctx.database.get('channel', {yuque: 1});
         const clist: string[] = [];
@@ -27,7 +24,14 @@ async function router(ctx: Context, conf: Config) {
         clist.push(...conf.list);
         // 去重
         const set = new Set(clist);
-        const list = Array.from(set);
+        return Array.from(set);
+    }
+
+    const app = express();
+    app.use(express.json());
+    app.use(express.urlencoded({extended: true}));
+    app.post('/', async (req, res) => {
+        const list = await getChannels();
         const title = req.body.data.title;
         const book = req.body.data.book.name;
         let user: string;
