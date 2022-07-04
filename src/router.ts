@@ -1,4 +1,4 @@
-import {Context, Logger} from "koishi";
+import {Context} from "koishi";
 import express from "express";
 import {Config, Type} from "./types";
 import axios from "axios";
@@ -13,7 +13,7 @@ async function getUserName(id:string){
     return res.data.data.name;
 }
 
-async function router(ctx:Context, log:Logger, conf:Config){
+async function router(ctx: Context, conf: Config) {
     const app = express();
     app.use(express.json());
     app.use(express.urlencoded({extended: true}));
@@ -79,7 +79,7 @@ async function router(ctx:Context, log:Logger, conf:Config){
         res.end('<h1>Copy That</h1>');
     });
     app.listen(conf.port, () => {
-        log.info(`Start Listening on port ${conf.port}`);
+        ctx.logger('yuque').info(`Start Listening on port ${conf.port}`);
     })
 }
 

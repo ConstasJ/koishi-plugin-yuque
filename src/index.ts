@@ -16,12 +16,11 @@ const Config = Schema.object({
 })
 
 async function apply(ctx: Context, conf: Config = {port: 10080, list: []}) {
-    ctx.model.extend('channel',{
-        yuque:'integer',
+    ctx.model.extend('channel', {
+        yuque: 'integer',
     })
-    const log = ctx.logger('yuque');
-    await router(ctx,log,conf);
-    await cmd(ctx,log,conf);
+    await router(ctx, conf);
+    await cmd(ctx, conf);
 }
 
 export {using,name,Config,apply};
