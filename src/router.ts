@@ -1,5 +1,5 @@
 import {Context} from "koishi";
-import express from "express";
+import body from "koa-body";
 import {Config, Type} from "./types";
 
 async function router(ctx: Context, conf: Config) {
@@ -27,21 +27,18 @@ async function router(ctx: Context, conf: Config) {
         return Array.from(set);
     }
 
-    const app = express();
-    app.use(express.json());
-    app.use(express.urlencoded({extended: true}));
-    app.post('/', async (req, res) => {
+    ctx.router.post('/yuque', body(), async (kctx) => {
         const list = await getChannels();
-        const title = req.body.data.title;
-        const book = req.body.data.book.name;
+        const title = kctx.request.body.data.title;
+        const book = kctx.request.body.data.book.name;
         let user: string;
-        if (req.body.data.user.type === 'Group') {
-            user = await getUserName(req.body.data.user_id);
+        if (kctx.request.body.data.user.type === 'Group') {
+            user = await getUserName(kctx.request.body.data.user_id);
         } else {
-            user = req.body.data.user.name;
+            user = kctx.request.body.data.user.name;
         }
-        const path = req.body.data.path;
-        const typeRaw = req.body.data.action_type;
+        const path = kctx.request.body.data.path;
+        const typeRaw = kctx.request.body.data.action_type;
         let type;
         switch (typeRaw) {
             case 'update': {
@@ -79,11 +76,8 @@ async function router(ctx: Context, conf: Config) {
         }
         const txt = `【${type}】《${title}》\n\n知识库：${book}\n操作人：${user}\n地址：https://www.yuque.com/${path}\n——————————`;
         await ctx.broadcast(list, txt);
-        res.end('<h1>Copy That</h1>');
+        kctx.response.body = '<h1>Copy That</h1>';
     });
-    app.listen(conf.port, () => {
-        ctx.logger('yuque').info(`Start Listening on port ${conf.port}`);
-    })
 }
 
 export {router};
