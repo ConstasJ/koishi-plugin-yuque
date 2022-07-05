@@ -1,17 +1,18 @@
 {
-  "name": "koishi-plugin-yuque",
-  "version": "1.5.2",
-  "description": "用于Koishi的语雀消息通知插件",
-  "main": "lib/index",
-  "types": "lib/index.d.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c"
-  },
-  "repository": {
-      "type": "git",
-      "url": "git@e.coding.net:sakurarealm/sakurarealmbot/yuque.git"
-  },
+    "name": "koishi-plugin-yuque",
+    "version": "1.5.2",
+    "description": "用于Koishi的语雀消息通知插件",
+    "main": "lib/index",
+    "types": "lib/index.d.ts",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rollup -c"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:ConstasJ/koishi-plugin-yuque.git"
+    },
+    "homepage": "https://github.com/ConstasJ/koishi-plugin-yuque",
     "keywords": [
         "Koishi.js",
         "chatbot",
