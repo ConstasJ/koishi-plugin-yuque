@@ -5,7 +5,7 @@
     "main": "lib/index",
     "types": "lib/index.d.ts",
     "scripts": {
-        "test": "",
+        "test": "mocha tests",
         "build": "rollup -c"
     },
     "files": [
@@ -24,10 +24,17 @@
     ],
     "author": "ConstasJ <2020212726@qq.com>",
     "devDependencies": {
+        "@koishijs/plugin-mock": "^1.0.6",
         "@semantic-release/changelog": "^6.0.1",
         "@semantic-release/git": "^10.0.1",
+        "@types/chai": "^4.3.1",
+        "@types/mocha": "^9.1.1",
         "@types/node": "^18.0.0",
+        "chai": "^4.3.6",
+        "esbuild": "^0.14.48",
+        "esbuild-register": "^3.3.3",
         "koishi": "^4.7.6",
+        "mocha": "^10.0.0",
         "rollup": "^2.75.7",
         "rollup-plugin-ts": "^3.0.2",
         "semantic-release": "^19.0.3",
