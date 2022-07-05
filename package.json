@@ -5,9 +5,12 @@
     "main": "lib/index",
     "types": "lib/index.d.ts",
     "scripts": {
-        "test": "s",
+        "test": "",
         "build": "rollup -c"
     },
+    "files": [
+        "lib"
+    ],
     "repository": {
         "type": "git",
         "url": "git@github.com:ConstasJ/koishi-plugin-yuque.git"
