@@ -27,7 +27,7 @@ async function router(ctx: Context, conf: Config) {
         return Array.from(set);
     }
 
-    ctx.router.post('/yuque', body(), async (kctx) => {
+    ctx.router.post('/api/yuque', body(), async (kctx) => {
         const list = await getChannels();
         const title = kctx.request.body.data.title;
         const book = kctx.request.body.data.book.name;
