@@ -1,3 +1,15 @@
+# [2.0.0-alpha.1](https://github.com/ConstasJ/koishi-plugin-yuque/compare/v1.6.0-alpha.2...v2.0.0-alpha.1) (2022-07-05)
+
+
+### Features
+
+* fix the error on releasing ([a1f56a8](https://github.com/ConstasJ/koishi-plugin-yuque/commit/a1f56a87255c7f96025f21e1271e4547c0571505))
+
+
+### BREAKING CHANGES
+
+* drop the present express router,and try to use new koishi-inside koa router
+
 # [1.6.0-alpha.2](https://github.com/ConstasJ/koishi-plugin-yuque/compare/v1.6.0-alpha.1...v1.6.0-alpha.2) (2022-07-05)
 
 
