@@ -1,3 +1,10 @@
+# [1.6.0-alpha.2](https://github.com/ConstasJ/koishi-plugin-yuque/compare/v1.6.0-alpha.1...v1.6.0-alpha.2) (2022-07-05)
+
+
+### Features
+
+* fix the error on releasing ([0defa71](https://github.com/ConstasJ/koishi-plugin-yuque/commit/0defa717418685f9d471762e158e0c6d91b25799))
+
 # [1.6.0-alpha.1](https://github.com/ConstasJ/koishi-plugin-yuque/compare/v1.5.2...v1.6.0-alpha.1) (2022-07-05)
 
 
