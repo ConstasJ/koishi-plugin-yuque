@@ -1,3 +1,11 @@
+# [1.6.0-alpha.1](https://github.com/ConstasJ/koishi-plugin-yuque/compare/v1.5.2...v1.6.0-alpha.1) (2022-07-05)
+
+
+### Features
+
+* rebuild the router part 1 ([d3832cd](https://github.com/ConstasJ/koishi-plugin-yuque/commit/d3832cd389fb896660bb1f16eb709fc7eabd1393))
+* rebuild the router part 2 ([12e637a](https://github.com/ConstasJ/koishi-plugin-yuque/commit/12e637accf2aae1a41e44246c18778a313c5007c))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
