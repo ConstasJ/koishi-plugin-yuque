@@ -12,10 +12,11 @@ declare module 'koishi' {
 const using = ['database'] as const;
 const name = 'yuque';
 const Config = Schema.object({
+    token: Schema.string().required().description('语雀API Token'),
     list: Schema.array(Schema.string()).description('配置转发的频道列表'),
 })
 
-async function apply(ctx: Context, conf: Config = {port: 10080, list: []}) {
+async function apply(ctx: Context, conf: Config = {token: '', list: []}) {
     ctx.model.extend('channel', {
         yuque: 'integer',
     })

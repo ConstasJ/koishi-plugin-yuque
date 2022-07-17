@@ -7,7 +7,7 @@ async function router(ctx: Context, conf: Config) {
         const res = await ctx.http.get(`https://www.yuque.com/api/v2/users/${id}`, {
             headers: {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36',
-                'X-Auth-Token': 'ssHgJoZIlE770Eilv7kvf5DO6pxbUHWdBbrk98PZ',
+                'X-Auth-Token': conf.token,
             }
         });
         return res.data.data.name;

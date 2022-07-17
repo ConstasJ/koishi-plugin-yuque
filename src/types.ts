@@ -1,5 +1,5 @@
 interface Config {
-    port?: number,
+    token: string,
     list: string[],
 }
 
