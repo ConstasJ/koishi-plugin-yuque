@@ -1,6 +1,6 @@
 {
     "name": "koishi-plugin-yuque",
-    "version": "1.6.0-alpha.2",
+    "version": "2.0.0-alpha.1",
     "description": "用于Koishi的语雀消息通知插件",
     "main": "lib/index",
     "types": "lib/index.d.ts",
