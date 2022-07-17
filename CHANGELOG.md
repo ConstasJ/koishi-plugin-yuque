@@ -1,3 +1,19 @@
+# [2.0.0-beta.1](https://github.com/ConstasJ/koishi-plugin-yuque/compare/v1.5.2...v2.0.0-beta.1) (2022-07-17)
+
+
+### Features
+
+* delete the embbeded token,and provided by configuration ([a1e9f97](https://github.com/ConstasJ/koishi-plugin-yuque/commit/a1e9f975cb71494ebf74ffa00c309e1ac6e9268a))
+* fix the error on releasing ([a1f56a8](https://github.com/ConstasJ/koishi-plugin-yuque/commit/a1f56a87255c7f96025f21e1271e4547c0571505))
+* fix the error on releasing ([0defa71](https://github.com/ConstasJ/koishi-plugin-yuque/commit/0defa717418685f9d471762e158e0c6d91b25799))
+* rebuild the router part 1 ([d3832cd](https://github.com/ConstasJ/koishi-plugin-yuque/commit/d3832cd389fb896660bb1f16eb709fc7eabd1393))
+* rebuild the router part 2 ([12e637a](https://github.com/ConstasJ/koishi-plugin-yuque/commit/12e637accf2aae1a41e44246c18778a313c5007c))
+
+
+### BREAKING CHANGES
+
+* drop the present express router,and try to use new koishi-inside koa router
+
 # [2.0.0-alpha.1](https://github.com/ConstasJ/koishi-plugin-yuque/compare/v1.6.0-alpha.2...v2.0.0-alpha.1) (2022-07-05)
 
 
